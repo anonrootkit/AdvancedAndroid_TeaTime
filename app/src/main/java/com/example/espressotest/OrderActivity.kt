@@ -66,7 +66,7 @@ class OrderActivity : AppCompatActivity() {
         setSupportActionBar(binding.orderToolbar)
         supportActionBar?.title = getString(R.string.order_title)
 
-        mTeaName = intent!!.getStringExtra(EXTRA_TEA_NAME)!!
+        mTeaName = intent?.getStringExtra(EXTRA_TEA_NAME) ?: ""
 
         binding.teaNameTextView.text = mTeaName
         binding.costTextView.text = getString(R.string.initial_cost)
